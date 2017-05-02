@@ -4,7 +4,7 @@
 
 ## How to run this project:
 
-1. Download these folder in ZIP
+1. Download these folder in ZIP or cmd: git clone https://github.com/newmuict12/ionic-ict-jnpp-wireless.git
 2. Extract on somewhere
 3. (Shift + right click on the folder **"ICT-JNPP"**) > (press"W" **or** open command window here)
 4. Run cmd: npm install
