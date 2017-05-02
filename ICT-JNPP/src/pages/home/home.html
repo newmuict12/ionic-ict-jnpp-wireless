@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar  color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="chat()">
+          <ion-icon name="chatbubbles"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg">
+  <div class="paddingbot">
+    <ion-card class="makeup-center"> Make Up News </ion-card>
+    <ion-card *ngFor="let home of homes | async">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="{{home.profilePic}}">
+        </ion-avatar>
+        <h2>{{
+              home.name
+            }}
+        </h2>
+        <p>{{
+              home.date
+            }}
+        </p>
+      </ion-item>
+      <img src="{{home.image}}">
+    </ion-card>
+  </div>
+
+  <div class="paddingbot">
+    <ion-card class="activity-center"> Activitiy News </ion-card>
+    <ion-card *ngFor="let activity of activities | async">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="{{activity.profilePic}}">
+        </ion-avatar>
+        <h2>{{
+              activity.name
+            }}
+        </h2>
+        <p>{{
+              activity.date
+            }}
+        </p>
+
+      </ion-item>
+      <img src="{{activity.image}}">
+    </ion-card>
+  </div>
+
+  <div class="paddingbot">
+    <ion-card class="schedule-center"> Class Schedule </ion-card>
+    <ion-card *ngFor="let schedule of schedules | async">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="{{schedule.profilePic}}">
+        </ion-avatar>
+        <h2>{{
+              schedule.name
+            }}
+        </h2>
+        <p>{{
+              schedule.section
+            }}
+        </p>
+      </ion-item>
+      <img src="{{schedule.image}}">
+    </ion-card>
+  </div>
+</ion-content>

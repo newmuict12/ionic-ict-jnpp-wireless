@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Schedule</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-card *ngFor="let schedule of schedules | async">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{schedule.profilePic}}">
+      </ion-avatar>
+      <h2>{{
+            schedule.name
+          }}
+      </h2>
+      <p>{{
+            schedule.section
+          }}
+      </p>
+    </ion-item>
+    <img src="{{schedule.image}}">
+  </ion-card>
+</ion-content>

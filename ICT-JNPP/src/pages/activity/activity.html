@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar  color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Activity</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg">
+  <ion-card *ngFor="let activity of activities | async">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{activity.profilePic}}">
+      </ion-avatar>
+      <h2>{{
+            activity.name
+          }}
+      </h2>
+      <p>{{
+            activity.date
+          }}
+      </p>
+
+    </ion-item>
+    <img src="{{activity.image}}">
+  </ion-card>
+</ion-content>
